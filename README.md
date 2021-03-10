@@ -35,4 +35,4 @@ The functions of the adapters are decorated with the alwaws_inline attribute, so
 
 Actual performance will depend on how well your adapter leverages hardware features. The essential functions for UnifiedGFX to work are `IBitmap<Tcolor>` functions `Height()`, `Width()`, and `drawPixel()`. But performance will be the worse posible. 
   
-If your adapter are able to override more `Graphic<Tcolor>` functions and map it to the display driver, performance improves substantially.
+If your adapter are able to override more `Graphic<Tcolor>` functions and map it to the display driver, performance improves substantially. This is specially important for funtions that perform operations in block, witch are must faster than modifing pixel by pixel. Usually `drawHorizontalLine`, `drawVerticalLine` or `fillRect` are example of this functions.
