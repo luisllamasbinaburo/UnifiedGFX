@@ -35,8 +35,8 @@ namespace UGFX
 		BOTTOM,
 	};
 
-    enum TEXT_ALIGNMENT : std::uint8_t
-    {
+	enum TEXT_ALIGNMENT : std::uint8_t
+	{
 		  TOP_LEFT        =  0 
 		, TOP_CENTER      =  1 
 		, TOP_RIGHT       =  2 
@@ -49,7 +49,7 @@ namespace UGFX
 		, BASELINE_LEFT   =  9 
 		, BASELINE_CENTER = 10 
 		, BASELINE_RIGHT  = 11 
-    };
+	};
 
 	template <typename Tcolor>
 	class IBitmap
@@ -109,7 +109,7 @@ namespace UGFX
  		virtual void setTextFont(uint8_t f) = 0;
 
 		virtual void drawChar(int32_t x, int32_t y, unsigned char c, Tcolor color, Tcolor bg, uint8_t size) = 0;
-        virtual void drawString(const String& string, int32_t x, int32_t y, TEXT_ALIGNMENT alignment, Tcolor color) = 0;
+		virtual void drawString(const String& string, int32_t x, int32_t y, TEXT_ALIGNMENT alignment, Tcolor color) = 0;
 	};
 
 	template <typename Tcolor>
@@ -662,7 +662,7 @@ namespace UGFX
  		virtual void setTextFont(uint8_t f) {}
 
 		virtual void drawChar(int32_t x, int32_t y, unsigned char c, Tcolor color, Tcolor bg, uint8_t size) {}
-        virtual void drawString(const String& string, int32_t x, int32_t y, TEXT_ALIGNMENT alignment, Tcolor color) {}
+		virtual void drawString(const String& string, int32_t x, int32_t y, TEXT_ALIGNMENT alignment, Tcolor color) {}
 	};
 
 	template <typename Tcolor>
